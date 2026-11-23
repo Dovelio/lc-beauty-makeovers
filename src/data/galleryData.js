@@ -51,7 +51,7 @@ export const galleryData = [
     id: 'g-7',
     title: 'Hydrating Botanical Facial',
     category: 'Skin & Face',
-    image: 'https://images.unsplash.com/photo-1512290903248-0a3f4bcd22f5?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85',
     alt: 'Revitalizing face treatment leaving skin dewy and nourished',
     tag: 'Facial & Glow',
   },
