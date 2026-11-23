@@ -1,0 +1,217 @@
+/* Services Section Styles */
+.services-section {
+  background: var(--bg-color);
+  position: relative;
+}
+
+/* Toolbar: Filters & Search */
+.services-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.services-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--white);
+  border: 1.5px solid var(--lavender-border);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.filter-pill:hover {
+  border-color: var(--primary-lavender);
+  color: var(--deep-lavender);
+  background: var(--light-lavender);
+}
+
+.filter-pill.active {
+  background: linear-gradient(135deg, var(--deep-lavender), var(--primary-lavender));
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(124, 92, 196, 0.28);
+}
+
+.services-search-wrapper {
+  position: relative;
+  min-width: 300px;
+  max-width: 400px;
+  flex-grow: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.services-search-input {
+  width: 100%;
+  padding: 0.65rem 2.6rem 0.65rem 2.7rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--lavender-border);
+  background: var(--white);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.services-search-input:focus {
+  border-color: var(--primary-lavender);
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
+.clear-search-btn:hover {
+  color: var(--text-primary);
+  background: var(--light-lavender);
+}
+
+/* Count bar */
+.services-count-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--lavender-border);
+}
+
+.count-info {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.count-info strong {
+  color: var(--deep-lavender);
+}
+
+.reset-filter-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--deep-lavender);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Grid Layout for all 22 services */
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1080px) {
+  .services-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .services-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .services-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .services-search-wrapper {
+    min-width: 100%;
+  }
+}
+
+/* Empty State */
+.services-empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1.5px dashed var(--lavender-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-icon {
+  color: var(--primary-lavender);
+}
+
+.services-empty-state h3 {
+  font-size: 1.5rem;
+  color: var(--elegant-dark);
+}
+
+.services-empty-state p {
+  max-width: 440px;
+  margin-bottom: 0.75rem;
+}
+
+/* Bottom Trust Banner */
+.services-bottom-banner {
+  margin-top: 3.5rem;
+  padding: 1.25rem 2rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--lavender-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.bottom-banner-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.bottom-banner-item svg {
+  color: var(--deep-lavender);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .services-bottom-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+}
